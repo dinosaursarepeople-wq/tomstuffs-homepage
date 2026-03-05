@@ -4,10 +4,11 @@ import { EncryptedText } from "@/components/ui/encrypted-text";
 
 const projects = [
   {
-    name: "Project One",
-    description: "Short summary of what this project does and why it is useful.",
+    name: "Terra Tracker",
+    description:
+      "A Terraria progress tracker that helps guide progression and shows how to beat each boss and event.",
     status: "Live",
-    href: "#",
+    href: "https://terratracker.tomstuffs.com",
   },
   {
     name: "Project Two",
