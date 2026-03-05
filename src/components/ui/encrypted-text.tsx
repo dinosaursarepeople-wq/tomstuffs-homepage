@@ -20,7 +20,6 @@ export function EncryptedText({
   const [revealIndex, setRevealIndex] = useState(0);
 
   useEffect(() => {
-    setRevealIndex(0);
     const interval = window.setInterval(() => {
       setRevealIndex((prev) => {
         if (prev >= text.length) {
@@ -38,9 +37,11 @@ export function EncryptedText({
     const rest = text.slice(revealIndex);
     return rest
       .split("")
-      .map((char) => {
+      .map((char, index) => {
         if (char === " ") return " ";
-        const idx = Math.floor(Math.random() * GLYPHS.length);
+        // Deterministic pseudo-random glyph selection to satisfy render purity.
+        const seed = char.charCodeAt(0) * 31 + (revealIndex + index) * 17;
+        const idx = Math.abs(seed) % GLYPHS.length;
         return GLYPHS[idx];
       })
       .join("");

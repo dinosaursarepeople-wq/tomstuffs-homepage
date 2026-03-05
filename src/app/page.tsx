@@ -52,7 +52,7 @@ export default function Home() {
         <section className="grid items-center gap-12 py-16 md:grid-cols-[1.25fr_0.75fr]">
           <div className="space-y-6">
             <p className="inline-flex rounded-full border border-gold bg-gold/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-              Home of Tom's internet stuff
+              Home of Tom&apos;s internet stuff
             </p>
             <h1 className="font-display text-5xl leading-[0.98] sm:text-6xl md:text-7xl">
               Useful things.
